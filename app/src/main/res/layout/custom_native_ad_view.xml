@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints" >
+
+    <FrameLayout
+        android:id="@+id/mediaContainerView"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:background="#ff00ff00"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/imageViewAD"
+            android:layout_width="300dp"
+            android:layout_height="220dp"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/mediaView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#ffffccff"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mediaContainerView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:maxLines="1"
+        android:text="{ Title }"
+        android:textColor="#ff00ff"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toRightOf="@id/imageViewLogo"
+        app:layout_constraintTop_toTopOf="@id/imageViewLogo"
+        app:layout_constraintRight_toLeftOf="@id/buttonGo"
+        app:layout_constraintBottom_toTopOf="@id/textViewDesc"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:maxLines="1"
+        android:text="{ Description }"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/textViewTitle"
+        app:layout_constraintRight_toRightOf="@id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        tools:ignore="MissingConstraints"
+        />
+
+    <Button
+        android:id="@+id/buttonGo"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:background="#ccffcc"
+        android:text="바로가기"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageViewLogo"
+        tools:ignore="MissingConstraints"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/infoViewLayout"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="#ffffccff"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" >
+
+        <ImageView
+            android:id="@+id/imageViewInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
